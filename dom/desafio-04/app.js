@@ -6,29 +6,11 @@ new Vue({
         digitou2: '',
         quadrado: '',
         msgErro: false,
-        estilo3: {}
-        // teste2: {
-        //     background: 'red',
-        //     width: '300px',
-        //     height: '300px'
-        // }
+        estilo3: {},
+        estilo4: {},
+        width: 0
 
     },
-    // watch: {
-    //     quadrado(event, novo, velho) {
-    //         console.log(`typeof(novo): ${typeof(novo)}`, `typeof(velho) ${typeof(velho)}`)
-    //         //     // this.quadrado = this.quadrado == 'true' ? true : false
-    //         // if (novo == 'true') {
-    //         //     this.quadrado = true
-    //         // }
-
-    //     }
-    // },
-    // computed: {
-    //     quadrado() {
-    //         console.log(this.quadrado)
-    //     }
-    // },
     methods: {
         iniciarEfeito() {
             setInterval(() => {
@@ -37,6 +19,13 @@ new Vue({
             }, 1000);
         },
         iniciarProgresso() {
+            
+            this.width += this.width < 100 ? 20 : 0
+            
+            this.estilo4 = {
+                width: `${this.width}%`
+            }
+
 
         },
         valorQuadrado() {

@@ -7,8 +7,8 @@ new Vue({
         quadrado: '',
         msgErro: false,
         estilo3: {},
-        estilo4: {},
-        width: 0
+        width: 0,
+        cont: 0
 
     },
     methods: {
@@ -19,13 +19,9 @@ new Vue({
             }, 1000);
         },
         iniciarProgresso() {
-            
-            this.width += this.width < 100 ? 20 : 0
-            
-            this.estilo4 = {
-                width: `${this.width}%`
-            }
-
+            if (this.cont < 100) 
+                this.cont += 20 
+                this.width = `${this.cont}%`
 
         },
         valorQuadrado() {
